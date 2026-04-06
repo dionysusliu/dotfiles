@@ -6,11 +6,11 @@ DOTFILES="$HOME/dotfiles"
 
 # cli
 ## nvim
-rsync -a --exclude='.DS_Store' ~/.config/nvim/ "$DOTFILES/cli/nvim/"
+rsync -a --exclude='.git/' --exclude='.DS_Store' ~/.config/nvim/ "$DOTFILES/cli/nvim/"
 ## zellij
 rsync -a ~/.config/zellij/config.kdl "$DOTFILES/cli/zellij/config.kdl"
 ## yazi
-rsync -a --exclude='plugins/' --exclude='.DS_Store' ~/.config/yazi/ "$DOTFILES/cli/yazi/"
+rsync -a --exclude='.git/' --exclude='plugins/' --exclude='.DS_Store' ~/.config/yazi/ "$DOTFILES/cli/yazi/"
 ## lazygit
 rsync -a ~/Library/Application\ Support/lazygit/config.yml "$DOTFILES/cli/lazygit/config.yml"
 
