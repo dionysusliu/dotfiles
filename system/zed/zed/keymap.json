@@ -1,0 +1,84 @@
+// Zed keymap -- ported from Neovim config (~/.config/nvim)
+// Leader = space. Most nvim maps are built-in under Zed vim mode;
+// only the non-built-in ones are bound here.
+[
+  // --- window/pane nav: C-h/j/k/l ---
+  {
+    "context": "Dock || Editor || Terminal",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+
+  // --- insert: jk -> Esc ---
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+
+  // --- flash.nvim port: label-based jump-to-anywhere with highlights ---
+  // s -> HelixJumpToWord: shows two-char labels on visible word starts,
+  //      type the label to jump (both directions). = flash.nvim `s`.
+  // S -> sneak backward kept as a fallback 2-char motion.
+  {
+    "context": "vim_mode == normal || vim_mode == visual",
+    "bindings": {
+      "s": "vim::HelixJumpToWord",
+      "shift-s": "vim::PushSneakBackward"
+    }
+  },
+
+  // --- space-leader normal-mode maps ---
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // LSP
+      "g r": "editor::FindAllReferences",
+      "space r n": "editor::Rename",
+      "shift-e": "editor::Hover",
+      "space f": "editor::Format",
+      "space c a": "editor::ToggleCodeActions",
+
+      // Telescope -> Zed finders
+      "space f d": "file_finder::Toggle",
+      "space f s": "outline::Toggle",
+      "space f shift-s": "project_symbols::Toggle",
+      "space f x": "diagnostics::Deploy",
+      "space f g": "pane::DeploySearch",
+      "space f w": "pane::DeploySearch",
+      "space f z": "buffer_search::Deploy",
+
+      // outline / aerial
+      "space a": "outline::Toggle",
+
+      // file manager (yazi -> project panel)
+      "space y": "project_panel::ToggleFocus",
+
+      // git (lazygit -> Zed git panel)
+      "space l g": "git_panel::ToggleFocus"
+    }
+  },
+
+  // --- cmd+number -> switch tabs (VSCode/nvim muscle memory) ---
+  // overrides default cmd+number (pane switch); panes still via ctrl-h/j/k/l.
+  // cmd-9 = last tab (VSCode behavior).
+  {
+    "context": "Editor || Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": "pane::ActivateLastItem"
+    }
+  }
+]

@@ -1,0 +1,39 @@
+# common UI/UX
+mouse-hide-while-typing = true
+
+# theme
+theme = Catppuccin Latte
+
+# cursor color follows the active theme (Catppuccin Latte)
+
+
+# cursor shaders (Neovide-like warp + ripple on mode change)
+custom-shader = shaders/cursor_warp.glsl
+custom-shader = shaders/ripple_cursor.glsl
+custom-shader-animation = always
+
+# font
+font-family = FireCode Nerd Font
+font-size = 17
+
+# clipboard
+clipboard-read = allow
+clipboard-write = allow
+
+# tmux-like state save
+window-save-state = always
+
+# tmux-like window management
+## move between splits
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+keybind = super+backquote=unbind
+
+# option as Alt key
+macos-option-as-alt = left
+
+# split divider (of panes) color
+split-divider-color = #8c959f
+

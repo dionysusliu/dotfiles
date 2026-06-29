@@ -1,0 +1,119 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "alicloud-sg-dev",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/root/dev/rocksdb-mini/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "scroll_sensitivity": 4.0,
+  "project_panel": {
+    "dock": "left"
+  },
+  "ui_font_family": ".ZedMono",
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "always",
+    "use_smartcase_find": true
+  },
+  "use_smartcase_search": true,
+  "tab_size": 4,
+  "hard_tabs": false,
+  "current_line_highlight": "line",
+  "search": {
+    "case_sensitive": false
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "default"
+      },
+      "type": "registry"
+    },
+    "codex-acp": {
+      "default_config_options": {
+        "model": "gpt-5.4"
+      },
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "agent": {
+    "terminal_init_command": "",
+    "sidebar_side": "right",
+    "default_model": {
+      "provider": "deepseek",
+      "model": "deepseek-v4-pro",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "favorite_models": [],
+    "single_file_review": true,
+    "model_parameters": []
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "terminal": {
+    "scrollbar": {
+      "show": "system"
+    },
+    "font_size": 15.0,
+    "font_family": "Iosevka Nerd Font"
+  },
+  "base_keymap": "VSCode",
+  "relative_line_numbers": "enabled",
+  "vertical_scroll_margin": 10.0,
+  "gutter": {
+    "line_numbers": true
+  },
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_font_fallbacks": [
+    "Menlo",
+    "CodeNewRoman Nerd Font",
+    "Monaco",
+    "Courier New",
+    "monospace"
+  ],
+  "buffer_font_family": "Fira Code",
+  "file_types": {
+    "asm-collection": [
+      "*.{a80,z80,asm,inc,s}",
+      "*.{a80,z80,asm,inc,s}"
+    ],
+    "asm-collection-list": [
+      "*.{list,lis}",
+      "*.{list,lis}"
+    ]
+  },
+  "ui_font_size": 17.0,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Gruvbox Dark Soft",
+  },
+}
