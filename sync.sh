@@ -4,6 +4,7 @@ set -ex
 # sync dotfile setups to current dir
 DOTFILES="$HOME/dotfiles"
 
+
 # cli
 ## nvim
 rsync -a --exclude='.git/' --exclude='.DS_Store' ~/.config/nvim/ "$DOTFILES/cli/nvim/"
@@ -14,9 +15,8 @@ rsync -a --exclude='.git/' --exclude='plugins/' --exclude='.DS_Store' ~/.config/
 ## lazygit
 rsync -a ~/Library/Application\ Support/lazygit/config.yml "$DOTFILES/cli/lazygit/config.yml"
 
+
 # system
-## karabiner
-rsync -a ~/.config/karabiner/karabiner.json "$DOTFILES/system/karabiner/karabiner.json"
 ## raycast
 rsync -a --exclude='.DS_Store' ~/.config/raycast/ "$DOTFILES/system/raycast/"
 
